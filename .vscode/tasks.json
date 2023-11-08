@@ -1,6 +1,11 @@
 {
     "tasks": [
         {
+			"presentation": {
+                "panel": "shared", 
+                "reveal": "always",
+                "focus": true
+            },
             "type": "cppbuild",
             "label": "C/C++: gcc build active file",
             "command": "/usr/bin/gcc",

@@ -6,9 +6,16 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:51:33 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/08 15:54:24 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/08 18:07:12 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void *memset(void *s, int c, size_t n)
+{
+	int	i;
+
+	i = 0;
+	while (i <)
+}
