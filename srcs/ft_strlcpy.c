@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 11:40:02 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 09:31:48 by cefuente         ###   ########.fr       */
+/*   Created: 2023/11/08 09:42:08 by cefuente          #+#    #+#             */
+/*   Updated: 2023/11/08 09:44:39 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
 
-int ft_isdigit(int c)
-{
-    if (c >= 48 && c <= 57)
-        return (1); 
-    else
-        return (0); 
+	i = 0;
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	i = 0;
+	while (src[i])
+		i++;
+	return (i);
 }
-/* 
-int main(int argc, char **argv)
-{
-    printf("OG is %d\n", isdigit(argv[1][0]));
-    printf("mine is %d\n", ft_isdigit(argv[1][0]));
-    return (0);
-} */

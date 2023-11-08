@@ -6,15 +6,15 @@
 #    By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/07 10:12:26 by cefuente         ###   ########.fr        #
+#    Updated: 2023/11/08 09:26:04 by cefuente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror -I includes
 
-SRC	=	srcs/ft_putchar.c \
-		srcs/ft_swap.c \
-		srcs/ft_putstr.c \
+SRC	=	srcs/ft_isalpha.c \
+		srcs/ft_isdigit.c \
+		srcs/ft_isalnum.c \
 		srcs/ft_strlen.c \
 		srcs/ft_strcmp.c 
 

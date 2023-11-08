@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 11:40:02 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 09:31:48 by cefuente         ###   ########.fr       */
+/*   Created: 2023/11/08 09:33:00 by cefuente          #+#    #+#             */
+/*   Updated: 2023/11/08 09:33:45 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int ft_isprint(int c)
 {
-    if (c >= 48 && c <= 57)
+    if (c >= 32 && c <= 126)
         return (1); 
     else
         return (0); 
 }
-/* 
-int main(int argc, char **argv)
-{
-    printf("OG is %d\n", isdigit(argv[1][0]));
-    printf("mine is %d\n", ft_isdigit(argv[1][0]));
-    return (0);
-} */
