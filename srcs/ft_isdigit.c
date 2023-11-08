@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:40:02 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 08:39:41 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:09:27 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int ft_isdigit(int c)
 
 int main(int argc, char **argv)
 {
-    printf("OG is %d\n", isdigit(atoi(argv[argc - 1])));
-    printf("mine is %d\n", ft_isdigit(atoi(argv[argc - 1])));
+    printf("OG is %d\n", isdigit(argv[1][0]));
+    printf("mine is %d\n", ft_isdigit(argv[1][0]));
     return (0);
 }

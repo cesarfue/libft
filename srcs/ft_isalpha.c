@@ -6,12 +6,13 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:04:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 08:41:40 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:11:14 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h> 
 #include <stdio.h>
+#include <stdlib.h>
 
 int ft_isalpha(int c)
 {
@@ -22,9 +23,9 @@ int ft_isalpha(int c)
         return (0); 
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
-    printf("OG is %d\n", isalpha('a'));
-    printf("mine is %d\n", ft_isalpha('a'));
+    printf("OG is %d\n", isalpha(argv[1][0]));
+    printf("mine is %d\n", ft_isalpha(argv[1][0]));
     return (0);
 }
