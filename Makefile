@@ -6,7 +6,7 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/08 14:17:21 by cesar            ###   ########.fr        #
+#    Updated: 2023/11/08 14:26:47 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,25 +15,25 @@ CFLAGS = -Wall -Wextra -Werror -I -lbsd -I includes
 SRC	=	srcs/ft_isalpha.c \
 		srcs/ft_isdigit.c \
 		srcs/ft_isalnum.c \
-		srcs/ft_isascii \
-		srcs/ft_isprint \
-		srcs/ft_strlen \
-		srcs/ft_memset \
-		srcs/ft_bzero \
-		srcs/ft_memcpy \
-		srcs/ft_memmove \
-		srcs/ft_strlcpy \
-		srcs/ft_strlcat \
-		srcs/ft_toupper \
-		srcs/ft_tolower \
-		srcs/ft_strchr \
-		srcs/ft_strrchr \
-		srcs/ft_strncmp \
-		srcs/ft_memchr \
-		srcs/ft_memcmp \
-		srcs/ft_strnstr \
-		srcs/ft_atoi \
-		srcs/main 
+		srcs/ft_isascii.c \
+		srcs/main.c \
+#		srcs/ft_isprint.c \
+		srcs/ft_strlen.c \
+		srcs/ft_memset.c \
+		srcs/ft_bzero.c \
+		srcs/ft_memcpy.c \
+		srcs/ft_memmove.c \
+		srcs/ft_strlcpy.c \
+		srcs/ft_strlcat.c \
+		srcs/ft_toupper.c \
+		srcs/ft_tolower.c \
+		srcs/ft_strchr.c \
+		srcs/ft_strrchr.c \
+		srcs/ft_strncmp.c \
+		srcs/ft_memchr.c \
+		srcs/ft_memcmp.c \
+		srcs/ft_strnstr.c \
+		srcs/ft_atoi.c \
 
 OBJ	=	$(SRC:.c=.o)
 
