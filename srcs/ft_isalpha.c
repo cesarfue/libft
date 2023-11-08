@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:04:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/07 11:37:47 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/08 08:41:40 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ int ft_isalpha(int c)
         return (0); 
 }
 
-int main(int argc, char **argv)
+int main(void)
 {
-    if (argc != 2)
-        return (-1);
-    printf("OG is %d\n", isalpha(argv(1)));
-    printf("mine is %d\n", ft_isalpha(argv(1)));
+    printf("OG is %d\n", isalpha('a'));
+    printf("mine is %d\n", ft_isalpha('a'));
     return (0);
 }
