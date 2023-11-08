@@ -6,13 +6,15 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:42:08 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 09:44:39 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:46:47 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && i < size - 1)
