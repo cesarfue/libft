@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:49:50 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 10:56:11 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:13:00 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 	return (0);
 }
 
-#include <string.h>
-#include <stdio.h>
 int	main(void)
 {	
 	char	str[] = "abeilles";

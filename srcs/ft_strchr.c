@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:20:14 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 11:13:35 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/09 13:55:40 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (const char * )(s + i);
+			return (char *)&s[i];
 		i++;
 	}
 	return (0);
