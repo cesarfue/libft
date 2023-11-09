@@ -1,23 +1,4 @@
 {
-<<<<<<< HEAD
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "cmake",
-			"label": "CMake: build",
-			"command": "build",
-			"targets": [
-				"[N/A - Select Kit]"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"problemMatcher": [],
-			"detail": "CMake template build task"
-		}
-	]
-=======
     "tasks": [
         {
 			"presentation": {
@@ -50,5 +31,4 @@
         }
     ],
     "version": "2.0.0"
->>>>>>> b8d2984a6d84cd5e58393aaffe8b2b03d625098f
 }
