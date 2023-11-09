@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:22:23 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 15:41:19 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/09 11:33:26 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
+/* 
 int main(int argc, char **argv)
 {
 	if (argc < 2)
@@ -29,4 +29,4 @@ int main(int argc, char **argv)
     printf("OG is %d\n", isalnum(argv[1][0]));
     printf("mine is %d\n", ft_isalnum(argv[1][0]));
     return (0);
-}  
+}  */ 
