@@ -6,21 +6,11 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:14:25 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 10:10:29 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/09 11:13:31 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:42:08 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 10:19:58 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:48:02 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,24 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (src[i] && i < size - 1)
+	while (src[i] && i < size)
 	{
 		dest[i] = src[i];
+		printf("hey");
 		i++;
 	}
 	dest[i] = '\0';
 	i = 0;
-	while (src[i])
+	while (src[i] && i < size)
 		i++;
 	return (i);
 }
-
-#include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
-#include <bsd/string.h>
 
 int	main(void)
 {
 /* 	if (argc < 3)
 		return (-1); */
+	printf("hey");
 	char *dest1 = "    ";
 	char *dest2 = "    ";
 	printf("OG is %zu\n", strlcpy(dest1, "abeilles", 4));
