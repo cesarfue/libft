@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:49:50 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 11:34:23 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:13:00 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(char *str, char *to_find, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (str[i] && i < len)
@@ -34,12 +34,10 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 	return (0);
 }
 
-#include <string.h>
-#include <stdio.h>
 int	main(void)
 {	
-	char	str[] = " ";
-	char	to_find[] = " "; 
-    size_t len  = 4; 
+	char	str[] = "abeilles";
+	char	to_find[] = "l"; 
+	size_t len  = 4; 
 	printf("%s||%s", ft_strnstr(str, to_find, len), strnstr(str, to_find, len));	
 }

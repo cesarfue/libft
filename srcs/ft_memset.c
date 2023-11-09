@@ -5,17 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 15:51:33 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/08 18:07:12 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/09 15:10:42 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/09 15:10:54 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memset(void *s, int c, size_t n)
+void	*memset(void *s, int c, size_t n)
 {
 	int	i;
 
 	i = 0;
-	while (i <)
+	while ()
+}
+
+int	main(int argc, char **argv)
+{
+	printf("OG is %s")
 }
