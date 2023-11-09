@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 14:58:49 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/09 10:08:54 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include	<unistd.h>
 #include	<stdlib.h>
 #include	<ctype.h>
-#include	<string.h>
+#include	<bsd/string.h>
 
 size_t		ft_strlcpy(char *dest, char *src, size_t size);
 size_t		ft_strlcat(char *dest, char *src, size_t size);
