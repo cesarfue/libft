@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:14:25 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 11:25:25 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/08 15:19:24 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
@@ -24,4 +24,12 @@ int ft_strrchr(const char *s, int c)
 		i--;
 	}
 	return (0);
+}
+
+int main (int argc, char **argv)
+{
+	if (argc != 3)
+		return (-1);
+	printf("OG is %s\n", strrchr((const char *)argv[1], argv[2][0]));
+	printf("mine is %s\n", ft_strrchr(argv[1], argv[2][0]));
 }
