@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 15:10:42 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/10 15:10:48 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/10 14:22:26 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/10 15:27:42 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ps;
-	size_t			i;
+	unsigned char		*pdest;
+	const unsigned char	*psrc;
+	size_t				i;
 
-	ps = s;
+	pdest = dest;
+	psrc = src;
 	i = 0;
-	if (n == 0)
-		return (s);
-	while (ps + i && i < n)
+	while (pdest + i && i < n)
 	{
-		ps[i] = (unsigned char) c;
+		pdest[i] = psrc[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }
 
 int	main(int argc, char **argv)
@@ -34,6 +34,6 @@ int	main(int argc, char **argv)
 	if (argc < 4)
 		return (-1);
 	size_t size = (size_t)atoi(argv[3]);
-	printf("OG is %p\n", memset((void *)argv[1], (int)argv[2][0], size));
-	printf("mi is %p\n", ft_memset((void *)argv[1], (int)argv[2][0], size));
+	printf("OG is %p\n", memcpy((void *)argv[1], (const void *)argv[2], size));
+	printf("mi is %p\n", ft_memcpy((void *)argv[1], (const void *)argv[2], size));
 }

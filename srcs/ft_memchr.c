@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 08:50:37 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/10 13:56:24 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/10 15:02:02 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 {
 	if (argc < 4)
 		return (-1);
-	printf("OG is %p\n", memchr((const void *)argv[1], (int)argv[2][0], (size_t)argv[3]));
-	printf("mi is %p\n", ft_memchr((const void *)argv[1], (int)argv[2][0], (size_t)argv[3]));
+	size_t size = (size_t)atoi(argv[3]);
+	printf("OG is %p\n", memchr((const void *)argv[1], (int)argv[2][0], size));
+	printf("mi is %p\n", ft_memchr((const void *)argv[1], (int)argv[2][0], size));
 }
