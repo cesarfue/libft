@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:20:14 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 15:21:50 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/10 08:33:41 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-int main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc < 3)
 		return (-1);

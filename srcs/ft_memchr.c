@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 08:50:37 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 15:20:31 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/10 13:56:24 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,24 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	const unsigned char	*ps;
+	size_t				i;
 
+	ps = s;
 	i = 0;
-	while (s[i])
+	while (ps + i && i < n)
 	{
-		if (((const void *)s[i]) == c)
-			return (const void *)&s[i];
+		if ((ps[i]) == (unsigned char) c)
+			return ((void *)(ps + i));
 		i++;
 	}
 	return (0);
 }
 
-int	main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	if (argc < 3)
+	if (argc < 4)
 		return (-1);
-	printf("OG is %p\n", memchr((const void *)argv[1], atoi(argv[2][0]), atoi(argv[3])));
-	printf("mine is %p\n", ft_strchr((const void *)argv[1], atoi(argv[2][0]), atoi(argv[3])));
+	printf("OG is %p\n", memchr((const void *)argv[1], (int)argv[2][0], (size_t)argv[3]));
+	printf("mi is %p\n", ft_memchr((const void *)argv[1], (int)argv[2][0], (size_t)argv[3]));
 }

@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:42:08 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 15:07:40 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/09 15:30:43 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 	return (i);
 }
 
-int	main(void)
+/* int	main(void)
 {
-/* 	if (argc < 3)
-		return (-1); */
+ 	if (argc < 3)
+		return (-1);
 	char dest1[20] = "    ";
 	char dest2[20] = "    ";
 	printf("OG is %zu\n", strlcpy(dest1, "abeilles", 4));
 	printf("mine is %zu\n", ft_strlcpy(dest2, "abeilles", 4));
 	printf("OG gives %s\nMine gives %s\n", dest1, dest2);
 	return (0);
-}
+}*/

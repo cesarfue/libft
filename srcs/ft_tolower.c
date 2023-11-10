@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:18:51 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 15:48:51 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/09 15:29:43 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_tolower(int c)
 		return (c);
 }
 
-int	main(int argc, char **argv)
+/* int	main(int argc, char **argv)
 {
 	if (argc != 2)
 		return (-1);
@@ -32,4 +32,4 @@ int	main(int argc, char **argv)
 	printf("OG is %d\n", tolower(argv[1][0]));
 	printf("mine is %d\n", ft_tolower(argv[1][0]));
 	printf("res1 is %s\nres2 is %s\n", res1, res2);
-}
+} */
