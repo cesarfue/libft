@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:42:08 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/10 16:19:19 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/10 20:23:50 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	src_length;
 
 	i = 0;
-	while (src[i] && i < size)
+	src_length = ft_strlen(src);
+	if (size == 0)
+		return (src_length);
+	while (src[i] && i < size - 1)
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
-	i = 0;
-	while (src[i] && i < size)
-		i++;
-	return (i);
+	return (src_length);
 }
 
 /* int	main(void)
@@ -39,4 +40,4 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	printf("mine is %zu\n", ft_strlcpy(dest2, "abeilles", 4));
 	printf("OG gives %s\nMine gives %s\n", dest1, dest2);
 	return (0);
-}*/
+} */
