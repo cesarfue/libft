@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 09:42:08 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 15:30:43 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/09 08:50:37 by cefuente          #+#    #+#             */
+/*   Updated: 2023/11/10 16:01:28 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	const unsigned char	*ps;
+	size_t				i;
 
+	ps = s;
 	i = 0;
-	while (src[i] && i < size)
+	while (ps + i && i < n)
 	{
-		dest[i] = src[i];
+		if ((ps[i]) == (unsigned char) c)
+			return ((void *)(ps + i));
 		i++;
 	}
-	dest[i] = '\0';
-	i = 0;
-	while (src[i] && i < size)
-		i++;
-	return (i);
+	return (0);
 }
 
-/* int	main(void)
+/* int	main(int argc, char **argv)
 {
- 	if (argc < 3)
+	if (argc < 4)
 		return (-1);
-	char dest1[20] = "    ";
-	char dest2[20] = "    ";
-	printf("OG is %zu\n", strlcpy(dest1, "abeilles", 4));
-	printf("mine is %zu\n", ft_strlcpy(dest2, "abeilles", 4));
-	printf("OG gives %s\nMine gives %s\n", dest1, dest2);
-	return (0);
-}*/
+	size_t size = (size_t)atoi(argv[3]);
+	printf("OG is %p\n", memchr((const void *)argv[1], (int)argv[2][0], size));
+	printf("mi is %p\n", ft_memchr((const void *)argv[1], (int)argv[2][0], size));
+} */

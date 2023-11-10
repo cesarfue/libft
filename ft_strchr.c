@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 09:33:59 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/08 13:14:21 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/08 10:20:14 by cefuente          #+#    #+#             */
+/*   Updated: 2023/11/10 16:45:42 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
+	{
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
 		i++;
-	return (i);
+	}
+	if (c == '\0')
+		return ((char *)&s[i]);
+	return (NULL);
 }
+
+/* int	main(int argc, char **argv)
+{
+	if (argc < 3)
+		return (-1);
+	printf("OG is %s\n", strchr(argv[1], argv[2][0]));
+	printf("mine is %s\n", ft_strchr(argv[1], argv[2][0]));
+} */

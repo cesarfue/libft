@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 15:10:42 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/10 15:10:48 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/10 15:30:09 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/10 16:16:48 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ps;
-	size_t			i;
+	unsigned char		*pdest;
+	const unsigned char	*psrc;
+	size_t				i;
 
-	ps = s;
+	pdest = dest;
+	psrc = src;
 	i = 0;
-	if (n == 0)
-		return (s);
-	while (ps + i && i < n)
+	if (pdest < psrc)
 	{
-		ps[i] = (unsigned char) c;
-		i++;
+		while (pdest + i && i < n)
+		{
+			pdest[i] = psrc[i];
+			i++;
+		}
 	}
-	return (s);
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc < 4)
-		return (-1);
-	size_t size = (size_t)atoi(argv[3]);
-	printf("OG is %p\n", memset((void *)argv[1], (int)argv[2][0], size));
-	printf("mi is %p\n", ft_memset((void *)argv[1], (int)argv[2][0], size));
+	else
+	{
+		while (pdest + i && i < n)
+		{
+			pdest[n - i - 1] = psrc[n - i - 1];
+			i++;
+		}
+	}
+	return (dest);
 }

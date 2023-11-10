@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 08:50:37 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/10 15:02:02 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/08 11:14:25 by cefuente          #+#    #+#             */
+/*   Updated: 2023/11/10 16:47:21 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	const unsigned char	*ps;
-	size_t				i;
+	int	i;
 
-	ps = s;
-	i = 0;
-	while (ps + i && i < n)
+	i = ft_strlen((char *)s);
+	while (i >= 0)
 	{
-		if ((ps[i]) == (unsigned char) c)
-			return ((void *)(ps + i));
-		i++;
+		if (s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i--;
 	}
 	return (0);
 }
 
-int	main(int argc, char **argv)
+/* 
+int main (int argc, char **argv)
 {
-	if (argc < 4)
+	if (argc != 3)
 		return (-1);
-	size_t size = (size_t)atoi(argv[3]);
-	printf("OG is %p\n", memchr((const void *)argv[1], (int)argv[2][0], size));
-	printf("mi is %p\n", ft_memchr((const void *)argv[1], (int)argv[2][0], size));
-}
+
+	printf("OG is %s\n", strrchr(argv[1], argv[2][0]));
+	printf("mine is %s\n", ft_strrchr(argv[1], argv[2][0]));
+} */

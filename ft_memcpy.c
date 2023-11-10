@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:20:14 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/10 08:33:41 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/10 14:22:26 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/10 16:01:32 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	unsigned char		*pdest;
+	const unsigned char	*psrc;
+	size_t				i;
 
+	pdest = dest;
+	psrc = src;
 	i = 0;
-	while (s[i])
+	while (pdest + i && i < n)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		pdest[i] = psrc[i];
 		i++;
 	}
-	return (0);
+	return (dest);
 }
 
-int	main(int argc, char **argv)
+/* int	main(int argc, char **argv)
 {
-	if (argc < 3)
+	if (argc < 4)
 		return (-1);
-	printf("OG is %s\n", strchr(argv[1], argv[2][0]));
-	printf("mine is %s\n", ft_strchr(argv[1], argv[2][0]));
-}
+	size_t size = (size_t)atoi(argv[3]);
+	printf("OG is %p\n", memcpy((void *)argv[1], (const void *)argv[2], size));
+	printf("mi is %p\n", ft_memcpy((void *)argv[1], (const void *)argv[2], size));
+} */

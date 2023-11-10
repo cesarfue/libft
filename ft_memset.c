@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 14:22:26 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/10 15:27:42 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/09 15:10:42 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/10 16:43:30 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char		*pdest;
-	const unsigned char	*psrc;
-	size_t				i;
+	unsigned char	*ps;
+	size_t			i;
 
-	pdest = dest;
-	psrc = src;
+	ps = s;
 	i = 0;
-	while (pdest + i && i < n)
+	while (ps + i && i < n)
 	{
-		pdest[i] = psrc[i];
+		ps[i] = (unsigned char) c;
 		i++;
 	}
-	return (dest);
+	return (s);
 }
 
-int	main(int argc, char **argv)
+/* int	main(int argc, char **argv)
 {
 	if (argc < 4)
 		return (-1);
 	size_t size = (size_t)atoi(argv[3]);
-	printf("OG is %p\n", memcpy((void *)argv[1], (const void *)argv[2], size));
-	printf("mi is %p\n", ft_memcpy((void *)argv[1], (const void *)argv[2], size));
-}
+	printf("OG is %p\n", memset((void *)argv[1], (int)argv[2][0], size));
+	printf("mi is %p\n", ft_memset((void *)argv[1], (int)argv[2][0], size));
+} */
