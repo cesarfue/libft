@@ -6,13 +6,14 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/10 16:16:20 by cesar            ###   ########.fr        #
+#    Updated: 2023/11/10 17:13:11 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror -I -lbsd -I includes
 
-SRC	= ft_isalnum.c \
+SRC	= ft_bzero.c \
+	ft_isalnum.c \
 	ft_isalpha.c \
 	ft_isascii.c \
 	ft_isdigit.c \
