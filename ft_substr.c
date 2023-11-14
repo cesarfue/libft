@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:42:56 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/13 11:27:31 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/13 08:24:23 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/14 08:26:38 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	char			*out;
+	unsigned int	i;
 
 	i = 0;
-	while (s1[i] && s2[i] && i < n)
+	out = malloc(sizeof(char) * (len + 1));
+	if (!out)
+		return (NULL);
+	while (i < len && s[start + i])
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		out[i] = s[start + i];
 		i++;
 	}
-	if (i == n)
-		return (0);
-	return ((unsigned char)(s1[i] - s2[i]));
+	out[i++] = '\0';
+	return (out);
 }
-
-/* int	main(int argc, char **argv)
-{
-	if (argc == 4)
-	{
-		printf("%d\n", strncmp(argv[1], argv[2], atoi(argv[3])));
-		printf("%d\n", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
-	}
-	return (0);
-} */

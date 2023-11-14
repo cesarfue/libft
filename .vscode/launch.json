@@ -32,8 +32,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/cesar/OneDrive/Documents/42/Cursus/libft/srcs",
-      "program": "/home/cesar/OneDrive/Documents/42/Cursus/libft/srcs/build/Debug/outDebug",
+      "cwd": "/home/cesar/OneDrive/Documents/42/Cursus/libft",
+      "program": "/home/cesar/OneDrive/Documents/42/Cursus/libft/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

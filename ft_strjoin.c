@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:42:56 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/13 11:27:31 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/13 09:20:13 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/13 09:46:08 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	size_t			i;
+	size_t			j;
+	char			*out;
 
 	i = 0;
-	while (s1[i] && s2[i] && i < n)
+	j = 0;
+	out = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!out)
+		return (NULL);
+	while (s1[i])
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		out[i] = s1[i];
 		i++;
 	}
-	if (i == n)
-		return (0);
-	return ((unsigned char)(s1[i] - s2[i]));
+	while (s2[j])
+		out[i++] = s2[j++];
+	out[i] = '\0';
+	return (out);
 }
 
-/* int	main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	if (argc == 4)
-	{
-		printf("%d\n", strncmp(argv[1], argv[2], atoi(argv[3])));
-		printf("%d\n", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
-	}
+	if (argc == 3)
+		printf("%s\n", ft_strjoin(argv[1], argv[2]));
 	return (0);
-} */
+}

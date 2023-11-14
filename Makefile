@@ -6,7 +6,7 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/10 17:13:11 by cesar            ###   ########.fr        #
+#    Updated: 2023/11/14 12:27:35 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,16 @@ SRC	= ft_bzero.c \
 	ft_memmove.c \
 	ft_memset.c \
 	ft_strchr.c \
+	ft_strdup.c \
+	ft_strjoin.c \
 	ft_strlcat.c \
 	ft_strlcpy.c \
 	ft_strlen.c \
 	ft_strncmp.c \
 	ft_strnstr.c \
 	ft_strrchr.c \
+	ft_strtrim.c \
+	ft_substr.c \
 	ft_tolower.c \
 	ft_toupper.c
 
