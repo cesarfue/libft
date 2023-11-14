@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:42:56 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/14 13:27:38 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/14 17:03:56 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/14 20:11:20 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_itoa(int n)
 {
 	size_t	i;
+	char	*str;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	str = malloc(sizeof(char *));
+	if (n >= 10)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		ft_itoa(n / 10);
+		ft_itoa(n % 10);
+	}
+	else
+	{
+		str[i] = (char)malloc(sizeof(char));
+		str[i] = n + 0;
 		i++;
 	}
-	if (i == n)
-		return (0);
-	return ((unsigned char)(s1[i] - s2[i]));
+	return (str);
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc == 2)
+		printf("mio esta %s\n", ft_itoa(atoi(argv[1])));
+	return (0);
 }

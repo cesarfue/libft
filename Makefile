@@ -6,22 +6,27 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/14 12:27:35 by cesar            ###   ########.fr        #
+#    Updated: 2023/11/14 21:05:38 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror -I -lbsd -I includes
 
-SRC	= ft_bzero.c \
+SRC	= ft_atoi.c \
+	ft_bzero.c \
+	ft_calloc.c \
 	ft_isalnum.c \
 	ft_isalpha.c \
 	ft_isascii.c \
 	ft_isdigit.c \
 	ft_isprint.c \
 	ft_memchr.c \
+	ft_memcmp.c \
 	ft_memcpy.c \
 	ft_memmove.c \
 	ft_memset.c \
+	ft_putchar_fd.c \
+	ft_putnbr_fd.c \
 	ft_strchr.c \
 	ft_strdup.c \
 	ft_strjoin.c \

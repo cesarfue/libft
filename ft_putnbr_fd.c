@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 09:20:13 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/14 15:52:14 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/14 20:27:55 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/14 21:12:56 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strjoin(char const *s1, char const *s2)
+/* 
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t			i;
-	size_t			j;
-	char			*out;
+	write(fd, &c, 1);
+} */
 
-	i = 0;
-	j = 0;
-	out = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!out)
-		return (NULL);
-	while (s1[i])
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		write(1, "-2147483648", 12);
+	else if (n < 0)
 	{
-		out[i] = s1[i];
-		i++;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n * -1, fd);
 	}
-	while (s2[j])
-		out[i++] = s2[j++];
-	out[i] = 0;
-	return (out);
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else if (n < 10)
+		ft_putchar_fd(n + '0', fd);
 }
 
 /* int	main(int argc, char **argv)
 {
 	if (argc == 3)
-		printf("%s\n", ft_strjoin(argv[1], argv[2]));
+		ft_putnbr_fd(atoi(argv[1]), atoi(argv[2]));
 	return (0);
 } */
