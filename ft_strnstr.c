@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:49:50 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/14 13:02:04 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/15 07:33:56 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!to_find || !str)
+		return (0);
 	i = 0;
-	while (str[i] && i < len)
+	while (i < len && str[i])
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && to_find[j] && i + j < len)
+		while (str[i + j] == to_find[j] && i + j < len && to_find[j])
 			j++;
 		if (to_find[j] == 0)
 			return ((char *)(str + i));
@@ -29,3 +31,13 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (0);
 }
+
+/* int	main(int argc, char **argv)
+{
+	if (argc == 4)
+	{
+		//printf("%s\n", ft_strnstr(argv[1], argv[2], (size_t)atoi(argv[3])));
+		printf("%s\n", strnstr(argv[1], argv[2], (size_t)atoi(argv[3])));
+	}
+}
+ */

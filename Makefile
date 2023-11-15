@@ -6,7 +6,7 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/14 21:05:38 by cesar            ###   ########.fr        #
+#    Updated: 2023/11/15 08:34:43 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ SRC	= ft_atoi.c \
 	ft_memmove.c \
 	ft_memset.c \
 	ft_putchar_fd.c \
+	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+	ft_putstr_fd.c \
 	ft_strchr.c \
 	ft_strdup.c \
 	ft_strjoin.c \

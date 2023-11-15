@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 08:50:37 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/15 08:32:18 by cesar            ###   ########.fr       */
+/*   Created: 2023/11/15 08:29:47 by cesar             #+#    #+#             */
+/*   Updated: 2023/11/15 08:33:31 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	const unsigned char	*ps;
-	size_t				i;
+	size_t	i;
 
-	ps = s;
 	i = 0;
-	while (ps + i && i < n)
-	{
-		if ((ps[i]) == (unsigned char) c)
-			return ((void *)(ps + i));
-		i++;
-	}
-	return (0);
+	while (s[i])
+		write(fd, &s[i++], 1);
+	write(fd, "\n", 1);
 }
