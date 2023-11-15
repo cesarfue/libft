@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:50:38 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/15 08:42:12 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/15 10:26:41 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	ps = s;
 	i = 0;
-	while (ps + i && i < n)
+	while (i < n)
 	{
 		ps[i] = (unsigned char) '\0';
 		i++;

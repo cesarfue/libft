@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:10:42 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/10 16:43:30 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/15 11:20:00 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,10 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	ps = s;
 	i = 0;
-	while (ps + i && i < n)
+	while (i < n)
 	{
 		ps[i] = (unsigned char) c;
 		i++;
 	}
 	return (s);
 }
-
-/* int	main(int argc, char **argv)
-{
-	if (argc < 4)
-		return (-1);
-	size_t size = (size_t)atoi(argv[3]);
-	printf("OG is %p\n", memset((void *)argv[1], (int)argv[2][0], size));
-	printf("mi is %p\n", ft_memset((void *)argv[1], (int)argv[2][0], size));
-} */

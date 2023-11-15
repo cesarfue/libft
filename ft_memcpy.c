@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:22:26 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/10 16:01:32 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/15 11:17:01 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	pdest = dest;
 	psrc = src;
 	i = 0;
-	while (pdest + i && i < n)
+	if (dest == NULL && src == NULL)
+		return (NULL);
+	while (i < n)
 	{
 		pdest[i] = psrc[i];
 		i++;
