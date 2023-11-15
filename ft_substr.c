@@ -6,13 +6,13 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 08:24:23 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/15 14:15:17 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:32:32 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+/* size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -21,7 +21,7 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*out;
@@ -45,11 +45,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	out[i] = 0;
 	return (out);
 }
-
+/* 
 int	main(int argc, char **argv)
 {
 	if (argc == 4)
 	{
 		printf("%s\n", ft_substr(argv[1], (unsigned int)atoi(argv[2]), (size_t)atoi(argv[3])));
 	}
-}
+} */
