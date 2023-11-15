@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/15 13:48:07 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:57:17 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <bsd/string.h>
+# include <stdint.h>
 
 // Part 1
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+         #
+#    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/15 13:44:46 by cefuente         ###   ########.fr        #
+#    Updated: 2023/11/15 17:02:03 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,6 @@ SRC	= ft_atoi.c \
 	ft_strlcpy.c \
 	ft_strlen.c \
 	ft_strncmp.c \
-	ft_strnstr.c \
 	ft_strrchr.c \
 	ft_strtrim.c \
 	ft_substr.c \

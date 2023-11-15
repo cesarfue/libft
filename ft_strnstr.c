@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:49:50 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/15 13:43:55 by cefuente         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:39:53 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (str == NULL && to_find == NULL)
+	if (str == NULL || to_find == NULL)
 		return (NULL);
 	while (i < len)
 	{
