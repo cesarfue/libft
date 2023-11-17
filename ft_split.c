@@ -6,13 +6,13 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 07:07:18 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/17 14:50:19 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 21:22:59 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free(char **splat)
+void	*ft_free(char **splat)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ void	ft_free(char **splat)
 	while (splat[i])
 		free(splat[i++]);
 	free(splat);
-	exit(1);
+	return (NULL);
 }
 
 char	*ft_strndup(char const *src, int n)
@@ -33,10 +33,7 @@ char	*ft_strndup(char const *src, int n)
 		i++;
 	dest = malloc((i + 1) * sizeof(char));
 	if (!dest)
-	{
-		free(dest);
 		return (NULL);
-	}
 	i = 0;
 	while (src[i] && i < n)
 	{
@@ -99,7 +96,7 @@ char	**ft_split(char const *str, char c)
 		{
 			splat[l] = ft_strndup(&str[i], wordlen(&str[i], c));
 			if (!splat[l++])
-				ft_free(splat);
+				return (ft_free(splat));
 			i += wordlen(&str[i], c);
 		}
 		else
