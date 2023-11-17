@@ -6,11 +6,22 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 07:07:18 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/17 13:40:20 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 14:50:19 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_free(char **splat)
+{
+	int	i;
+
+	i = 0;
+	while (splat[i])
+		free(splat[i++]);
+	free(splat);
+	exit(1);
+}
 
 char	*ft_strndup(char const *src, int n)
 {
@@ -22,7 +33,10 @@ char	*ft_strndup(char const *src, int n)
 		i++;
 	dest = malloc((i + 1) * sizeof(char));
 	if (!dest)
+	{
+		free(dest);
 		return (NULL);
+	}
 	i = 0;
 	while (src[i] && i < n)
 	{
@@ -40,6 +54,8 @@ int	ft_countwords(char const *str, char c)
 
 	i = 0;
 	words = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 	{
 		if (str[i] != c)
@@ -82,7 +98,8 @@ char	**ft_split(char const *str, char c)
 		if (str[i] != c)
 		{
 			splat[l] = ft_strndup(&str[i], wordlen(&str[i], c));
-			l++;
+			if (!splat[l++])
+				ft_free(splat);
 			i += wordlen(&str[i], c);
 		}
 		else
@@ -92,7 +109,8 @@ char	**ft_split(char const *str, char c)
 	return (splat);
 }
 
-/* int	main(int argc, char **argv)
+/* #include <stdio.h>
+int	main(int argc, char **argv)
 {
 	char	**splat;
 	int		i;
@@ -103,7 +121,7 @@ char	**ft_split(char const *str, char c)
 		splat = ft_split(argv[1], argv[2][0]);
 		while (splat[i])
 			printf("%s\n", splat[i++]);
-		free(splat);
+		ft_free(splat);
 	}
 	return (0);
 } */
