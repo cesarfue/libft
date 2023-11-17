@@ -6,20 +6,16 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/17 12:57:41 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 13:49:00 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <ctype.h>
-# include <bsd/string.h>
-# include <stdint.h>
-# include <limits.h>
+
 // Part 1
 
 void	*ft_memset(void *s, int c, size_t n);

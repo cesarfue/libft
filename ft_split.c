@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 07:07:18 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/17 08:30:13 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 13:40:20 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *str, char c)
 
 	i = 0;
 	l = 0;
-	if (!str || !c)
+	if (!str)
 		return (NULL);
 	splat = malloc(sizeof(char *) * (ft_countwords(str, c) + 1));
 	if (!splat)
@@ -91,8 +91,8 @@ char	**ft_split(char const *str, char c)
 	splat[l] = NULL;
 	return (splat);
 }
-/* 
-int	main(int argc, char **argv)
+
+/* int	main(int argc, char **argv)
 {
 	char	**splat;
 	int		i;
