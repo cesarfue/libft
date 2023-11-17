@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:49:50 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/15 14:39:53 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 11:20:09 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,28 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	size_t	i;
 	size_t	j;
 
-	i = 0;
-	if (str == NULL || to_find == NULL)
+	if ((str == NULL && to_find == NULL) || len == 0)
 		return (NULL);
-	while (i < len)
+	if (*to_find == '\0')
+		return ((char *)str);
+	i = 0;
+	while (i <= len)
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && i + j < len)
+		while (str[i + j] == to_find[j] && to_find[j] != '\0' && i + j < len)
 			j++;
-		if (to_find[j] == 0)
+		if (to_find[j] == '\0')
 			return ((char *)(str + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-/* 
-int	main(int argc, char **argv)
+
+/* int	main(int argc, char **argv)
 {
-	if (argc == 4)d
+	if (argc == 4)
 	{
 		printf("mi is %s\n", ft_strnstr(argv[1], argv[2], (size_t)atoi(argv[3])));
 		printf("OG is %s\n", strnstr(argv[1], argv[2], (size_t)atoi(argv[3])));
 	}
-}
- */
+} */

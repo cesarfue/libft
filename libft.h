@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/15 14:57:17 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 12:57:41 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <ctype.h>
 # include <bsd/string.h>
 # include <stdint.h>
-
+# include <limits.h>
 // Part 1
 
 void	*ft_memset(void *s, int c, size_t n);

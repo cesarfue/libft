@@ -6,36 +6,66 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:03:56 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/14 20:11:20 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 13:26:47 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int	ft_intlen(int n)
 {
-	size_t	i;
-	char	*str;
+	int	i;
 
 	i = 0;
-	str = malloc(sizeof(char *));
-	if (n >= 10)
+	if (n == 0)
+		i = 1;
+	else if (n < 0)
 	{
-		ft_itoa(n / 10);
-		ft_itoa(n % 10);
+		n *= -1;
+		i++;
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	int		len;
+	int		stop;
+	char	*str;
+
+	len = ft_intlen(n);
+	if (n == INT_MIN)
+		return (strdup("-2147483648"));
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	if (n < 0)
+	{
+		stop = 1;
+		str[0] = '-';
+		n *= -1;
 	}
 	else
+		stop = 0;
+	str[len--] = 0;
+	while (len >= stop)
 	{
-		str[i] = (char)malloc(sizeof(char));
-		str[i] = n + 0;
-		i++;
+		str[len--] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (str);
 }
 
-int	main(int argc, char **argv)
+/* int	main(int argc, char **argv)
 {
 	if (argc == 2)
+	{
 		printf("mio esta %s\n", ft_itoa(atoi(argv[1])));
+	}
 	return (0);
-}
+} */

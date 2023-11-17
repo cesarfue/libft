@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 09:34:31 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/15 09:19:10 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/17 11:19:54 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (ft_strchr(set, s1[len - 1]) && len > i)
 		len--;
-	out = malloc(sizeof(char) * len - i + 1);
+	out = ft_substr(s1, i, len - i);
 	if (!out)
 		return (NULL);
-	out = ft_substr(s1, i, len - i);
 	return (out);
+	free(out);
 }
 
 /* int	main(int argc, char **argv)
