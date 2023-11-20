@@ -6,22 +6,12 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:45:03 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/10 16:18:44 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/20 08:22:32 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
- */
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;

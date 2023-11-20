@@ -6,11 +6,9 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:30:37 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/09 11:33:39 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/20 08:17:05 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -19,12 +17,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-/* 
-int main(int argc, char **argv)
-{
-	if (argc < 2)
-		return (-1);
-    printf("OG is %d\n", isascii(argv[1][0]));
-    printf("mine is %d\n", ft_isascii(argv[1][0]));
-    return (0);
-}   */

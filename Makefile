@@ -6,13 +6,11 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2023/11/17 10:59:05 by cesar            ###   ########.fr        #
+#    Updated: 2023/11/20 17:36:06 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFLAGS = -Wall -Wextra -Werror -I -lbsd -I includes
-
-SRC	= ft_atoi.c \
+SRCS	=	ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
 	ft_isalnum.c \
@@ -47,24 +45,32 @@ SRC	= ft_atoi.c \
 	ft_tolower.c \
 	ft_toupper.c
 
-OBJ	=	$(SRC:.c=.o)
+OBJS	=	${SRCS:.c=.o}
+
+HEADER	= libft.h
 
 NAME	=	libft.a
 
-.c.o:
-	gcc $(CFLAGS) -c $< -o $(<:.c=.o)
+CC	= cc
 
-all:	$(NAME)
+AR	= ar -rc
 
-$(NAME):	$(OBJ)
-	ar -rc $(NAME) $(OBJ)
+FLAGS	= -Wall -Wextra -Werror
+
+all	:	${NAME}
+
+%.o	:	%.c ${HEADER}
+	${CC} ${FLAGS} -c $< -o $@
+
+${NAME}:	${OBJS} Makefile
+	${AR} ${NAME} ${OBJS}
 
 clean:
-	rm -f $(OBJ)
+	rm -f ${OBJS}
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f ${NAME}
 
 re:	fclean all
 
-.PHONY: clean fclean re all 
+.PHONY: all clean fclean re 

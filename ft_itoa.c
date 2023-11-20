@@ -6,15 +6,15 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:03:56 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/17 13:49:23 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/20 17:24:05 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int n)
+static size_t	ft_intlen(int n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)
@@ -34,9 +34,9 @@ int	ft_intlen(int n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	int		stop;
-	char	*str;
+	size_t		len;
+	size_t		stop;
+	char		*str;
 
 	len = ft_intlen(n);
 	if (n == -2147483648)
@@ -52,20 +52,11 @@ char	*ft_itoa(int n)
 	}
 	else
 		stop = 0;
-	str[len--] = 0;
-	while (len >= stop)
+	str[len] = 0;
+	while (len > stop)
 	{
-		str[len--] = (n % 10) + '0';
+		str[--len] = (n % 10) + '0';
 		n /= 10;
 	}
 	return (str);
 }
-
-/* int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		printf("mio esta %s\n", ft_itoa(atoi(argv[1])));
-	}
-	return (0);
-} */

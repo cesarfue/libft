@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 08:24:23 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/16 07:02:59 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/20 08:38:57 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*out;
-	unsigned int	i;
+	size_t			i;
 	size_t			size;
 
 	i = 0;

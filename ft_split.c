@@ -6,15 +6,15 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 07:07:18 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/17 21:22:59 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/20 15:37:11 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_free(char **splat)
+static void	*ft_free(char **splat)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (splat[i])
@@ -23,10 +23,10 @@ void	*ft_free(char **splat)
 	return (NULL);
 }
 
-char	*ft_strndup(char const *src, int n)
+static char	*ft_strndup(char const *src, size_t n)
 {
-	int		i;
-	char	*dest;
+	size_t		i;
+	char		*dest;
 
 	i = 0;
 	while (src[i] && i < n)
@@ -44,10 +44,10 @@ char	*ft_strndup(char const *src, int n)
 	return (dest);
 }
 
-int	ft_countwords(char const *str, char c)
+static size_t	ft_countwords(char const *str, char c)
 {
-	int	i;
-	int	words;
+	size_t	i;
+	size_t	words;
 
 	i = 0;
 	words = 0;
@@ -67,9 +67,9 @@ int	ft_countwords(char const *str, char c)
 	return (words);
 }
 
-int	wordlen(char const *str, char c)
+static size_t	wordlen(char const *str, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] && str[i] != c)
@@ -79,9 +79,9 @@ int	wordlen(char const *str, char c)
 
 char	**ft_split(char const *str, char c)
 {
-	char	**splat;
-	int		i;
-	int		l;
+	char		**splat;
+	size_t		i;
+	size_t		l;
 
 	i = 0;
 	l = 0;
@@ -105,20 +105,3 @@ char	**ft_split(char const *str, char c)
 	splat[l] = NULL;
 	return (splat);
 }
-
-/* #include <stdio.h>
-int	main(int argc, char **argv)
-{
-	char	**splat;
-	int		i;
-
-	i = 0;
-	if (argc == 3)
-	{
-		splat = ft_split(argv[1], argv[2][0]);
-		while (splat[i])
-			printf("%s\n", splat[i++]);
-		ft_free(splat);
-	}
-	return (0);
-} */

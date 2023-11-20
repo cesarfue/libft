@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2023/11/17 19:54:08 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/20 17:41:04 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stddef.h>
-# include <ctype.h>
+# include <stdint.h>
+# include <limits.h>
 
 // Part 1
 
