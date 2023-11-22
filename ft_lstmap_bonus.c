@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:42:50 by cesar             #+#    #+#             */
-/*   Updated: 2023/11/21 17:37:01 by cesar            ###   ########.fr       */
+/*   Updated: 2023/11/22 15:57:51 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*n_ret;
 	void	*ret_content;
 
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	ret = NULL;
 	while (lst != NULL)
