@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 08:38:12 by cesar             #+#    #+#             */
-/*   Updated: 2023/12/16 07:51:35 by cesar            ###   ########.fr       */
+/*   Created: 2024/01/26 13:24:37 by cesar             #+#    #+#             */
+/*   Updated: 2024/01/31 09:05:34 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s)
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 {
-	size_t		i;
-	size_t		out_len;
-	char		*out;
+	void	*ret;
 
-	i = 0;
-	out_len = ft_strlen(s);
-	out = malloc(sizeof(char) * out_len + 1);
-	if (!out)
+	ret = malloc(new_size);
+	if (!ret)
 		return (NULL);
-	while (i < out_len && s[i])
-	{
-		out[i] = s[i];
-		i++;
-	}
-	out[i] = 0;
-	return (out);
+	if (!ptr)
+		return (ret);
+	ft_memmove(ret, ptr, old_size);
+	return (free(ptr), ret); 
 }
