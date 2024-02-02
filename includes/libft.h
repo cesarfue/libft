@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2024/02/02 08:56:07 by cesar            ###   ########.fr       */
+/*   Updated: 2024/02/02 10:33:46 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int		ft_lstsize(t_list *lst);
 
 char	*get_next_line(int fd);
 
-// Addtional functions
+// Additional functions
 
 void	quit(char *quit_msg);
 char	*ft_strndup(char const *src, size_t n);

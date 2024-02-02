@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 08:54:22 by cesar             #+#    #+#             */
-/*   Updated: 2024/02/02 08:54:38 by cesar            ###   ########.fr       */
+/*   Updated: 2024/02/02 09:32:53 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	freetab_in(void **tab, int size)
 
 	i = 0;
 	while (i < size)
-		free(tab[i++]);
+			free(tab[i++]);
 }
