@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2024/02/02 10:33:46 by cesar            ###   ########.fr       */
+/*   Updated: 2024/02/02 15:16:32 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,5 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 void	*malloc_er(size_t size); /* Malloc, but better */
 void	freetab_in(void **tab, int size);
 void	freetab_ext(void **tab, int size);
-
 
 #endif
