@@ -6,7 +6,7 @@
 /*   By: cefuente <cefuente@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2024/02/02 15:16:32 by cefuente         ###   ########.fr       */
+/*   Updated: 2024/02/02 15:55:03 by cefuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,6 @@ char	*get_next_line(int fd);
 void	quit(char *quit_msg);
 char	*ft_strndup(char const *src, size_t n);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
-void	*malloc_er(size_t size); /* Malloc, but better */
 void	freetab_in(void **tab, int size);
 void	freetab_ext(void **tab, int size);
 
