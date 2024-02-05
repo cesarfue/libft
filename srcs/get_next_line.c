@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 08:11:19 by cesar             #+#    #+#             */
-/*   Updated: 2023/12/16 08:18:24 by cesar            ###   ########.fr       */
+/*   Updated: 2024/02/05 18:36:06 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,17 @@ static char	*get_next(char *rope)
 	return (free(rope), next_rope);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, char **rope)
 {
-	static char	*rope;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	rope = buf_to_rope(fd, rope);
-	if (!rope)
+	*rope = buf_to_rope(fd, *rope);
+	if (!*rope)
 		return (NULL);
-	line = rope_to_line(rope);
-	rope = get_next(rope);
+	line = rope_to_line(*rope);
+	*rope = get_next(*rope);
 	if (!line)
 		return (NULL);
 	return (line);

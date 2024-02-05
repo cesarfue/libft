@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   freetab_ext.c                                      :+:      :+:    :+:   */
+/*   freetab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-void	freetab_ext(void **tab, int size)
+void	freetab(void **tab, int size)
 {
 	int	i;
 

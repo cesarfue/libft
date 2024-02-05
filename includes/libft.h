@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:12:29 by cefuente          #+#    #+#             */
-/*   Updated: 2024/02/02 10:33:46 by cesar            ###   ########.fr       */
+/*   Updated: 2024/02/05 18:40:08 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		ft_lstsize(t_list *lst);
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
+char	*get_next_line(int fd, char **rope);
 
 // Additional functions
 
@@ -88,7 +88,7 @@ char	*ft_strndup(char const *src, size_t n);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 void	*malloc_er(size_t size); /* Malloc, but better */
 void	freetab_in(void **tab, int size);
-void	freetab_ext(void **tab, int size);
+void	freetab(void **tab, int size);
 
 
 #endif
