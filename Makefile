@@ -6,9 +6,10 @@
 #    By: cesar <cesar@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:46:17 by cefuente          #+#    #+#              #
-#    Updated: 2024/02/05 14:08:54 by cesar            ###   ########.fr        #
+#    Updated: 2024/02/06 14:00:05 by cesar            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 SRCS	=	srcs/ft_atoi.c srcs/ft_bzero.c srcs/ft_calloc.c srcs/ft_isalnum.c srcs/ft_isalpha.c srcs/ft_isascii.c srcs/ft_isdigit.c \
 	srcs/ft_isprint.c srcs/ft_itoa.c srcs/ft_memchr.c srcs/ft_memcmp.c srcs/ft_memcpy.c srcs/ft_memmove.c srcs/ft_memset.c srcs/ft_putchar_fd.c \
@@ -19,7 +20,7 @@ SRCS	=	srcs/ft_atoi.c srcs/ft_bzero.c srcs/ft_calloc.c srcs/ft_isalnum.c srcs/ft
 	srcs/ft_lstmap.c srcs/ft_lstnew.c srcs/ft_lstsize.c \
 	srcs/printf/ft_printf.c srcs/printf/ft_numbers.c srcs/printf/ft_strings.c srcs/printf/ft_switch.c \
 	srcs/get_next_line.c \
-	srcs/quit.c srcs/ft_strndup.c srcs/ft_realloc.c srcs/malloc_er.c srcs/freetab_in.c srcs/freetab.c \
+	srcs/quit.c srcs/ft_strndup.c srcs/ft_realloc.c srcs/freetab_in.c srcs/freetab.c \
 
 OBJS	=	$(patsubst srcs/%.c, objs/%.o, $(SRCS))
 HEADER    =    includes/libft.h includes/ft_printf.h

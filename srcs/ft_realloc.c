@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 13:24:37 by cesar             #+#    #+#             */
-/*   Updated: 2024/02/05 10:01:31 by cesar            ###   ########.fr       */
+/*   Updated: 2024/02/06 13:55:52 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 {
 	void	*ret;
 
-	ret = malloc_er(new_size);
+	ret = malloc(new_size);
+	if (!ret)
+		return (NULL);
 	if (!ptr)
 		return (ret);
 	ft_memmove(ret, ptr, old_size);
-	return (free(ptr), ret); 
+	return (free(ptr), ret);
 }
